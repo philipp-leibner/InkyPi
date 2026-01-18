@@ -18,9 +18,18 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "astral>=3.2",
+    "feedparser>=6.0.12",
+    "icalendar>=6.3.2",
+    "numpy>=2.4.1",
+    "pi-heif>=1.1.1",
+    "psutil>=7.2.1",
     "pytest>=8.3.5",
     "pytest-env>=1.1.5",
+    "pytz>=2025.2",
+    "recurring-ical-events>=3.8.0",
     "ruff>=0.9.10",
+    "waitress>=3.0.2",
 ]
 
 [tool.pytest_env]
