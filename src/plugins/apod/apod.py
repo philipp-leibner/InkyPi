@@ -90,9 +90,10 @@ class Apod(BasePlugin):
             )
             pass
 
-        if settings.get('$showTitle') == 'true':
+        if settings.get('showTitle') == 'true':
             # Add title and copyright
             draw = ImageDraw.Draw(image)
+            padding = int(settings.get('textPadding', 20))
 
             # choose font (fallback to default)
             try:
@@ -106,7 +107,6 @@ class Apod(BasePlugin):
             text_height = bbox[3] - bbox[1]
 
             # bottom-right position with padding
-            padding = 15
             x = image.width - text_width - padding
             y = image.height - text_height - padding
 
