@@ -1,6 +1,27 @@
 {
     "name": "InkyPi Development",
     "display_type": "mock",
-    "resolution": [800, 480],
-    "orientation": "horizontal"
+    "resolution": [
+        800,
+        480
+    ],
+    "orientation": "horizontal",
+    "playlist_config": {
+        "playlists": [
+            {
+                "name": "Default",
+                "start_time": "00:00",
+                "end_time": "24:00",
+                "plugins": [],
+                "current_plugin_index": null
+            }
+        ],
+        "active_playlist": null
+    },
+    "refresh_info": {
+        "refresh_time": "2026-01-25T12:40:06.934539+00:00",
+        "image_hash": "3ab1d934b64207a161846cc6b8c1e9dbf19dde3803faad4a7ab3bbae9621ab62",
+        "refresh_type": "Manual Update",
+        "plugin_id": "apod"
+    }
 }
