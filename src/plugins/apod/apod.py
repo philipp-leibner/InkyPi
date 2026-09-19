@@ -92,11 +92,18 @@ class Apod(BasePlugin):
             fs = int(settings.get('textSize', 20))
 
             # choose font (fallback to default)
+            font_path = "src/static/fonts/Jost.ttf"
+
             try:
-                font = ImageFont.truetype("src/static/fonts/Jost.ttf", fs)
-            except IOError:
-                logger.error(f"Failed to load font, using default font.")
-                font = ImageFont.load_default(fs)
+                font = ImageFont.truetype(font_path, fs)
+            except OSError as exc:
+                logger.error(
+                    "Failed to load font '%s' with size %s: %s. Using default font.",
+                    font_path,
+                    fs,
+                    exc,
+                )
+                font = ImageFont.load_default()
 
             # text size
             bbox = draw.textbbox((0, 0), text, font=font)
