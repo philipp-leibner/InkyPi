@@ -4,6 +4,8 @@ This plugin fetches the Astronomy Picture of the Day (APOD) from NASA's API
 and displays it on the InkyPi device. It supports optional manual date selection or random dates.
 For the API key, set `NASA_SECRET={API_KEY}` in your .env file.
 """
+from pathlib import Path
+
 import numpy as np
 
 from plugins.base_plugin.base_plugin import BasePlugin
@@ -13,6 +15,8 @@ import requests
 import logging
 from random import randint
 from datetime import datetime, timedelta
+
+FONT_PATH = Path(__file__).resolve().parents[2] / "static" / "fonts" / "Jost.ttf"
 
 logger = logging.getLogger(__name__)
 
@@ -92,10 +96,10 @@ class Apod(BasePlugin):
             fs = int(settings.get('textSize', 20))
 
             # choose font (fallback to default)
-            font_path = "src/static/fonts/Jost.ttf"
+            font_path = "../../static/fonts/Jost.ttf"
 
             try:
-                font = ImageFont.truetype(font_path, fs)
+                font = ImageFont.truetype(FONT_PATH, fs)
             except OSError as exc:
                 logger.error(
                     "Failed to load font '%s' with size %s: %s. Using default font.",
