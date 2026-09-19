@@ -92,7 +92,7 @@ class Apod(BasePlugin):
             fs = int(settings.get('textSize', 20))
 
             # choose font (fallback to default)
-            font_path = "src/static/fonts/Jost.ttf"
+            font_path = "../../static/fonts/Jost.ttf"
 
             try:
                 font = ImageFont.truetype(font_path, fs)
