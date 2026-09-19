@@ -6,6 +6,28 @@
         480
     ],
     "orientation": "horizontal",
+    "plugin_order": [
+        "calendar",
+        "ai_image",
+        "ai_text",
+        "clock",
+        "comic",
+        "countdown",
+        "github",
+        "image_album",
+        "image_folder",
+        "image_upload",
+        "apod",
+        "image_url",
+        "newspaper",
+        "rss",
+        "screenshot",
+        "todo_list",
+        "unsplash",
+        "weather",
+        "wpotd",
+        "year_progress"
+    ],
     "playlist_config": {
         "playlists": [
             {
@@ -19,9 +41,9 @@
         "active_playlist": null
     },
     "refresh_info": {
-        "refresh_time": "2026-01-25T13:52:24.988813+00:00",
-        "image_hash": "b823b48baa22a5e2e396014b9fe0c339d829870d68f88e909bc782a946766f8e",
-        "refresh_type": "Manual Update",
-        "plugin_id": "apod"
+        "refresh_time": null,
+        "image_hash": null,
+        "refresh_type": null,
+        "plugin_id": null
     }
 }
